@@ -6,7 +6,7 @@ const db = require("../database").config;
 controller.getLogin = (req, res) => 
 {
     const user ={
-        id : req.body.id,
+        id : req.query.id,   
         time : new Date().getTime()
     };
     const token = jwt.sign({user}, db.secret_key, {expiresIn:'5m'});
