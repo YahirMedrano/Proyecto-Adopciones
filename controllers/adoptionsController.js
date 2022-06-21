@@ -1,5 +1,4 @@
 let controller = {};
-let format = require("../format").format;
 
 controller.getAdoption = (req, res) =>
 {
