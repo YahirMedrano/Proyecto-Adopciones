@@ -79,9 +79,8 @@ controller.getAdoptionByUser = (req, res) =>
 	});
 };
 
-controller.getAdoptions = (req, res) =>
 {
-    const sql = "adoptions INNER JOIN pets ON pets.id = adoptions.pet_id INNER JOIN users ON users.id = adoptions.user_id";
+    const sql = "SELECT * FROM adoptions INNER JOIN pets ON pets.id = adoptions.pet_id INNER JOIN users ON users.id = adoptions.user_id";
 	req.getConnection((error,conn) => {
         if(error)
         {
