@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const db = require("../database").config;
 const middleware = {
     validateToken: function(req, res, next){
         const bearerHeader = req.headers["authorization"];
