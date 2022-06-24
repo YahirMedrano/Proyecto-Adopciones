@@ -11,3 +11,4 @@ router.put('/pet', jwtToken.validateToken, petValidator.update, petsController.p
 router.delete('/pet', jwtToken.validateToken, petValidator.id, petsController.deletePet);
 
 module.exports = router;
+
